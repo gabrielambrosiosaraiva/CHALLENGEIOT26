@@ -20,7 +20,7 @@ Descrição do Projeto
 Este projeto consiste em um sistema de segurança, auditoria e conformidade para a emissão de receitas médicas em plataformas de telemedicina veterinária. O objetivo principal é garantir a validação física da presença e da situação cadastral do médico veterinário antes da assinatura digital de qualquer documento clínico.
 
 
-
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 O sistema integra hardware de leitura por radiofrequência (RFID) a um ecossistema local de orquestração de dados e interface web, simulando de ponta a ponta as camadas de hardware, comunicação, regras de negócio e barramento de dados corporativo.
@@ -32,7 +32,13 @@ Camada de Hardware para Back-end (Serial Puro/UART): O microcontrolador Arduino 
 
 Camada de Back-end para Front-end (HTTP / WebSockets): O Node-RED atua como um servidor local web. A renderização da Dashboard e a atualização dos dados em tempo real no navegador do usuário final utilizam requisições HTTP e canais WebSockets estáveis.
 
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
 Componentes do Projeto
+
+
 Hardware e Eletrônica
 Microcontrolador: Arduino Uno R3
 
@@ -44,12 +50,17 @@ Matriz de Contatos (Protoboard): Utilizada para a distribuição das linhas de a
 
 Componentes de Proteção: Resistores de 220Ω acoplados nas linhas dos LEDs e do Buzzer (essencial para limitar o consumo de corrente, evitar a queima dos componentes e prevenir quedas de tensão na porta USB do computador).
 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 Softwares e Bibliotecas
-Firmware: Linguagem C++ desenvolvida na Arduino IDE, utilizando as bibliotecas nativas SPI.h e MFRC522.h.
 
-Gerenciador de Escopo: Node-RED executado sobre o ambiente Node.js.
+      Firmware: Linguagem C++ desenvolvida na Arduino IDE, utilizando as bibliotecas nativas SPI.h e MFRC522.h.
 
-Módulos do Node-RED: node-red-node-serialport para controle de fluxo serial e node-red-dashboard para construção da interface gráfica.
+      Gerenciador de Escopo: Node-RED executado sobre o ambiente Node.js.
+
+      Módulos do Node-RED: node-red-node-serialport para controle de fluxo serial e node-red-dashboard para construção da interface gráfica.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Processo de Montagem, Integração e Execução
 Montagem do Hardware na Protoboard
@@ -61,11 +72,17 @@ O LED Verde e o LED Vermelho são posicionados na protoboard com seus terminais 
 
 O buzzer ativo é inserido na protoboard com o terminal negativo na linha comum de GND e o terminal positivo em série com um resistor de 220Ω conectado ao Pino Digital 8 do Arduino para proteção contra picos de corrente.
 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 Configuração e Upload do Firmware
 Com o Node-RED inicialmente fechado para evitar conflitos na porta serial, a biblioteca MFRC522 deve estar instalada na Arduino IDE através do Gerenciador de Bibliotecas. O Arduino é conectado ao computador via cabo USB, selecionando o modelo correspondente e a respectiva porta COM ativa. O código C++ do firmware é carregado na placa. O Serial Monitor pode ser utilizado de forma isolada para validação preliminar da leitura física dos cartões e fechado em seguida.
 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 Configuração do Servidor Back-end (Node-RED)
 O servidor é inicializado via terminal e o editor local é acessado pelo navegador. Na gerência de paletas, verifica-se a instalação dos nós de comunicação serial e de dashboard. Após a importação do JSON com a lógica de fluxo, o nó de entrada serial é configurado com a mesma porta COM utilizada pelo Arduino sob a velocidade de 9600 Baud. O nó de atraso adjacente é parametrizado em modo Rate Limit para filtrar o fluxo de entrada, permitindo apenas uma mensagem a cada 3 segundos e descartando qualquer leitura intermediária repetida. O fluxo se torna ativo após a execução do Deploy.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Operação e Validação do Fluxo
 A interface gráfica de usuário é acessada pelo navegador no endereço de Dashboard local.
