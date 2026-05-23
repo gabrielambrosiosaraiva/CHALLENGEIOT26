@@ -1,10 +1,15 @@
 MEMBROS DA EQUIPE CTech
 
 João Victor Vendrameto - RM 563665 - 2TDSPV
+
 Nicolas de Oliveira Jacob - RM 564205 - 2TDSPX
+
 Gabriel Ambrósio Saraiva - RM 566552 - 2TDSPV
+
 Vinicius Romaguera Cardozo - RM 562308 - 2TDSPX
+
 Yuri Fuzinatto Garzoli Barreto - RM 561450 - 2TDSPX
+
 
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
