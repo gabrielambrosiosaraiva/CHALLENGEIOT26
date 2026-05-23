@@ -1,0 +1,37 @@
+=====================================================================
+LISTA DE REQUISITOS E DEPENDÊNCIAS - CHALLENGE FIAP 2026
+=====================================================================
+
+HARDWARE E COMPONENTES ELETRÔNICOS
+---------------------------------------------------------------------
+- Microcontrolador: 1x Placa Arduino Uno R3 (ou compatível ATmega328P)
+- Leitor RFID: 1x Módulo MFRC522 (Frequência 13.56 MHz)
+- Chaveiros/Cartões RFID: Mínimo 2x Tags padrão Mifare 1K
+- Atuadores: 1x Buzzer Ativo (5V), 1x LED Verde, 1x LED Vermelho
+- Passivos: 3x Resistores de 220 Ohms ou 330 Ohms
+- Conexões: 1x Protoboard (mínimo 400 pontos) e Cabos Jumper (M/M e M/F)
+- Interface de Dados: 1x Cabo USB A-B para conexão serial e energia
+
+DEPENDÊNCIAS DO FIRMWARE (ARDUINO IDE)
+---------------------------------------------------------------------
+- Ambiente de Desenvolvimento: Arduino IDE (Versão 2.0.0 ou superior)
+- Protocolo de Comunicação: SPI.h (Biblioteca nativa do núcleo Arduino)
+- Biblioteca do Sensor: MFRC522.h (Desenvolvida por miguelbalboa)
+
+AMBIENTE DE SERVIDOR E BACK-END
+---------------------------------------------------------------------
+- Ambiente de Execução: Node.js (Versão estável LTS)
+- Gerenciador de Pacotes: NPM (Incluso na instalação padrão do Node.js)
+- Core do Orquestrador: Node-RED (Instalação global via NPM)
+
+MÓDULOS ADICIONAIS DO NODE-RED (PALETTE MANAGER)
+---------------------------------------------------------------------
+- node-red-node-serialport (Mapeamento de portas COM e leitura/escrita)
+- node-red-dashboard (Nós gráficos de front-end para interface web)
+
+PROTOCOLOS E INTERFACES DE REDE UTILIZADOS
+---------------------------------------------------------------------
+- Comunicação Serial: UART via USB emulada (Configurada em 9600 Baud Rate)
+- Protocolo Web: HTTP (Para acesso ao painel local via localhost:1880/ui)
+- Canal de Atualização: WebSockets (Sincronização em tempo real dos nós)
+=====================================================================
