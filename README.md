@@ -1,6 +1,22 @@
+MEMBROS DA EQUIPE CTech
+
+João Victor Vendrameto - RM 563665 - 2TDSPV
+Nicolas de Oliveira Jacob - RM 564205 - 2TDSPX
+Gabriel Ambrósio Saraiva - RM 566552 - 2TDSPV
+Vinicius Romaguera Cardozo - RM 562308 - 2TDSPX
+Yuri Fuzinatto Garzoli Barreto - RM 561450 - 2TDSPX
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
 Challenge FIAP 2026 - Sistema de Validação de Telemedicina Veterinária com RFID e Node-RED
 Descrição do Projeto
 Este projeto consiste em um sistema de segurança, auditoria e conformidade para a emissão de receitas médicas em plataformas de telemedicina veterinária. O objetivo principal é garantir a validação física da presença e da situação cadastral do médico veterinário antes da assinatura digital de qualquer documento clínico.
+
+
+
+
 
 O sistema integra hardware de leitura por radiofrequência (RFID) a um ecossistema local de orquestração de dados e interface web, simulando de ponta a ponta as camadas de hardware, comunicação, regras de negócio e barramento de dados corporativo.
 
